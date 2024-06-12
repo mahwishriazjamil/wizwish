@@ -1,1 +1,1 @@
-# wiz
+# wizwish
