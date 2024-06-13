@@ -53,7 +53,7 @@ resource "google_compute_instance" "default" {
 
 resource "google_storage_bucket" "bucket" {
   name          = "mongo-backups-bucket"
-  location      = "US"
+  location      = "eu"
   force_destroy = true
 }
 
