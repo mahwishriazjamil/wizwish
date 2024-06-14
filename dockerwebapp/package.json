@@ -1,0 +1,20 @@
+{
+    "name": "webapp",
+    "version": "1.0.0",
+    "description": "A simple Node.js web application",
+    "main": "src/index.js",
+    "scripts": {
+      "start": "node src/index.js"
+    },
+    "engines": {
+      "node": ">=14.17.0"
+    },
+    "dependencies": {
+      "express": "^4.19.2",
+      "mongoose": "^7.6.12",
+      "dotenv": "^16.0.3"
+    },
+    "author": "Mahwish",
+    "license": "ISC"
+  }
+  
