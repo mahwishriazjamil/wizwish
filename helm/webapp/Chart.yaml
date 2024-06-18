@@ -1,0 +1,5 @@
+apiVersion: v2
+name: webapp
+description: Helm chart for deploying Node.js application with MongoDB
+version: 1.0.0
+appVersion: 1.0.0

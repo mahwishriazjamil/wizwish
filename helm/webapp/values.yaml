@@ -1,0 +1,26 @@
+replicaCount: 3
+
+image:
+  repository: europe-west2-docker.pkg.dev/idyllic-bloom-426312-e4/wizwish-repo/wizwish-app
+  tag: v6
+  pullPolicy: Always
+
+mongodb:
+  uri: "mongodb://admin:password@10.154.0.6:27017/admin"
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+  requests:
+    cpu: "100m"
+    memory: "256Mi"
+
+service:
+  type: LoadBalancer
+  port: 80
+  nodePort: 30823
+
+serviceAccount:
+  name: my-service-account  # Default service account name
+  create: true  # Indicates whether to create the Service Account
