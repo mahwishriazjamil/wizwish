@@ -8,17 +8,17 @@ image::arch-diagram.jpg[Architecture Diagram]
 === Components
 
 ==== Web Application
-* Technology: Node.js with Mongoose for MongoDB interaction.
-* Deployment: Docker container managed by Kubernetes.
-* Load Balancer: Distributes traffic to the Kubernetes nodes.
+* *Technology*: Node.js with Mongoose for MongoDB interaction.
+* *Deployment*: Docker container managed by Kubernetes.
+* *Load Balancer*: Distributes traffic to the Kubernetes nodes.
 
 ==== Database
-* Technology: MongoDB
-* Deployment: Installed on a VM with an older Linux version.
-* Authentication: Uses MongoDB authentication for secure access.
-* Backup: Automated backups using a script, compressed and stored in Google Cloud Storage.
+* *Technology*: MongoDB
+* *Deployment*: Installed on a VM with an older Linux version.
+* *Authentication*: Uses MongoDB authentication for secure access.
+* *Backup*: Automated backups using a script, compressed and stored in Google Cloud Storage.
 
 ==== Storage
-* Technology: Google Cloud Storage
-* Usage: Stores MongoDB backups.
-* Permissions: Configured for public read access.
+* *Technology*: Google Cloud Storage
+* *Usage*: Stores MongoDB backups.
+* *Permissions*: Configured for public read access.
