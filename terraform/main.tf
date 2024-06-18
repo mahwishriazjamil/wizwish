@@ -36,7 +36,7 @@ resource "google_compute_instance" "default" {
 
   boot_disk {
     initialize_params {
-      image = "projects/ubuntu-os-pro-cloud/global/images/ubuntu-pro-1804-bionic-v20240607"  # Using Ubuntu 18.04
+      image = "projects/ubuntu-os-pro-cloud/global/images/ubuntu-pro-1804-bionic-v20240607"  # using Ubuntu 18.04
     }
   }
 
@@ -74,7 +74,7 @@ resource "google_compute_firewall" "mongodb-firewall" {
   network = "default"
   direction = "INGRESS"
 
-  # Allow traffic from k8s cluster IP range to MongoDB VM on port 27017
+  # allow traffic from k8s cluster IP range to MongoDB VM on port 27017
   allow {
     protocol = "tcp"
     ports    = ["27017"]
@@ -94,7 +94,7 @@ resource "google_storage_bucket" "mongo-backups-mrj" {
 
   uniform_bucket_level_access = false
 
-  # This allows objects in the bucket to be publicly accessible
+  # allows objects in the bucket to be publicly accessible
   lifecycle_rule {
     action {
       type = "SetStorageClass"
@@ -107,24 +107,19 @@ resource "google_storage_bucket" "mongo-backups-mrj" {
   }
 }
 
-# Create public rule to grant public read access to the bucket
+# public rule to grant public read access to the bucket
 resource "google_storage_bucket_access_control" "mongodb_backups_public_rule" {
   bucket = google_storage_bucket.mongo-backups-mrj.name
   role   = "READER"
   entity = "allUsers"
 }
 
-#public can read, SA can write to bucket
+# public rule to read, service account can write to bucket
 resource "google_storage_bucket_access_control" "mongodb_backups_sa_rule" {
   bucket = google_storage_bucket.mongo-backups-mrj.name
   role   = "WRITER"
   entity = "user-${google_service_account.mongo-vm-sa.email}"
 }
-// object level access i.e. to users.csv
-#   bucket = google_storage_bucket.mongo-backups-mrj.name
-#   role   = "READER"
-#   entity = "allUsers"
-# }
 
 output "gke_cluster_name" {
   value = google_container_cluster.primary.name
