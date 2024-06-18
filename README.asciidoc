@@ -3,7 +3,7 @@
 == Overview
 This project demonstrates a three-tier web application deployed on Google Cloud Platform (GCP). The architecture includes a containerized Node.js web application running in a Kubernetes cluster, a MongoDB database on a virtual machine (VM), and object storage for MongoDB backups.
 
-image::architecture-diagram.png[Architecture Diagram]
+image::arch-diagram.jpg[Architecture Diagram]
 
 === Components
 
