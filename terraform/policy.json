@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "role": "roles/iam.serviceAccountTokenCreator",
+      "members": [
+        "user:rarerthanacanofmahwish@gmail.com",
+        "serviceAccount:sa-wizwish-tf-sbx@idyllic-bloom-426312-e4.iam.gserviceaccount.com"
+      ]
+    }
+  ],
+  "etag": "ACAB"
+}
