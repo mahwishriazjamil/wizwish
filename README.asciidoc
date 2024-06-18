@@ -1,0 +1,24 @@
+= Three-Tier Web Application on Google Cloud Platform (GCP)
+
+== Overview
+This project demonstrates a three-tier web application deployed on Google Cloud Platform (GCP). The architecture includes a containerized Node.js web application running in a Kubernetes cluster, a MongoDB database on a virtual machine (VM), and object storage for MongoDB backups.
+
+image::architecture-diagram.png[Architecture Diagram]
+
+=== Components
+
+==== Web Application
+* Technology:: Node.js with Mongoose for MongoDB interaction.
+* Deployment:: Docker container managed by Kubernetes.
+* Load Balancer:: Distributes traffic to the Kubernetes nodes.
+
+==== Database
+* Technology:: MongoDB
+* Deployment:: Installed on a VM with an older Linux version.
+* Authentication:: Uses MongoDB authentication for secure access.
+* Backup:: Automated backups using a script, compressed and stored in Google Cloud Storage.
+
+==== Storage
+* Technology:: Google Cloud Storage
+* Usage:: Stores MongoDB backups.
+* Permissions:: Configured for public read access.
