@@ -1,0 +1,2 @@
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+0 2 * * * /home/MahwishRiaz-Jamil/mongobackup.sh > /home/MahwishRiaz-Jamil/logs/logfile.log 2>&1
