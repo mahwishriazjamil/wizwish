@@ -7,6 +7,8 @@ provider "google" {
 resource "google_container_cluster" "primary" {
   name     = "primary-cluster"
   location = var.zone
+  # set to true before tf apply, will need to be reapplied if changed to "false" before running tf destroy
+  deletion_protection = false
 
   node_config {
     machine_type = "e2-medium"
