@@ -26,5 +26,4 @@ variable "myVar" {
   description = "hey sonar"
   type        = string
   default     = "AKIAEXAMPLE123456"
-  int         = "testing"
 }
