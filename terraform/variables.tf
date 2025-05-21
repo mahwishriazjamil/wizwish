@@ -15,3 +15,15 @@ variable "zone" {
   type        = string
   default     = "europe-west2-a"
 }
+
+variable "mrj_token" {
+  description = "hey sonar"
+  type        = string
+  default     = "5oCygLafKDArzd.atlasv1.lkJAlIHZK8wapUca1Ukf7onre5ckfYJFMQIwYAIb9lzy0VAAbepGgMfnVUsVfaw6lQa"
+}
+
+variable "myVar" {
+  description = "hey sonar"
+  type        = string
+  default     = "AKIAEXAMPLE123456"
+}
