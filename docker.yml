@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature01
     paths-ignore:
       - 'README.md'
 
